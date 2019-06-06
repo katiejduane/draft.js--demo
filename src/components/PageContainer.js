@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Editor, EditorState, RichUtils } from 'draft-js';
 
+import styles from './PageContainer.module.css';
+
 
 class PageContainer extends Component{
     constructor(props){
@@ -40,7 +42,7 @@ class PageContainer extends Component{
 
     render(){
         return(
-            <div>
+            <div className={styles.EditorContainer}>
                 <button onClick={this.onItalicClick}><em>I</em></button>
                 <button onClick={this.onUnderlineClick}>U</button>
                 <button onClick={this.onBoldClick}><strong>B</strong></button>
